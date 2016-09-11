@@ -15,6 +15,7 @@ public interface UserTMapper {
     int insertSelective(UserT record);
 
     UserT selectByPrimaryKey(Integer id);
+    
 
     int updateByPrimaryKeySelective(UserT record);
 
