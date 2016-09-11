@@ -55,4 +55,14 @@ public class UserServiceImplTest {
         params.put("agelist", namelist);
 		System.out.println(userService.findByIdsAndAges(params));
 	}
+	
+	@Test
+	public void findasd() {
+		List<Integer> idList = Arrays.asList(1,3,4);
+		List<Integer> namelist = Arrays.asList(22,23);
+		Map<String, Object> params = new HashMap<String, Object>();
+        params.put("idList", idList);
+        params.put("agelist", namelist);
+		System.out.println(userService.findByIdsAndAges(params));
+	}
 }
