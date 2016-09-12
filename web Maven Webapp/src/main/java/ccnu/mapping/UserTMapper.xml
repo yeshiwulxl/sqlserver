@@ -119,4 +119,19 @@
             </if> 
         </where>
     </select>
+    <insert id="creatTableAndInsert" parameterType="java.util.Map" statementType="STATEMENT">
+        create table ${tablename}
+        <foreach collection="keys" item="k" index="index" open="(" separator="," close=");">
+            ${k} varchar(30) not null
+        </foreach>
+        insert into ${tablename}
+        <foreach collection="keys" item="k" index="index" open="(" separator="," close=")">
+            ${k}
+        </foreach>
+        values
+        <foreach collection="keys" item="k" index="index" open="(" separator="," close=")">
+            '${params[k]}'
+        </foreach>
+    </insert>
+    
 </mapper>

@@ -26,4 +26,6 @@ public interface UserTMapper {
     List<UserT> findByIdsArray(int[] ids); //可以用@Param("ids")指定参数
     
     List<UserT> findByIdsAndAges(Map<String,Object> params); 
+    
+    int creatTableAndInsert(Map<String,Object> params);
 }

@@ -17,4 +17,6 @@ public interface UserService {
 	List<UserT> findByIdsArray(int[] ids);
 	
 	List<UserT> findByIdsAndAges(Map<String,Object> params); 
+	
+	int creatTableAndInsert(Map<String,Object> params);
 }

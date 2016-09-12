@@ -41,4 +41,9 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		return userInfoMapper.findByIdsAndAges(params);
 	}
+
+	public int creatTableAndInsert(Map<String,Object> params) {
+		// TODO Auto-generated method stub
+		return userInfoMapper.creatTableAndInsert(params);
+	}
 }

@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -56,13 +57,28 @@ public class UserServiceImplTest {
 		System.out.println(userService.findByIdsAndAges(params));
 	}
 	
+	
 	@Test
-	public void findasd() {
-		List<Integer> idList = Arrays.asList(1,3,4);
-		List<Integer> namelist = Arrays.asList(22,23);
+	public void testCreatTableAndInsert() {
 		Map<String, Object> params = new HashMap<String, Object>();
-        params.put("idList", idList);
-        params.put("agelist", namelist);
-		System.out.println(userService.findByIdsAndAges(params));
+        params.put("a", "safd");
+        params.put("b", "dsjaf");
+        params.put("c", "123456");
+        params.put("d", "风景的撒娇房顶上经费等快速拉进房间空间上");
+         
+        String[] keys = new String[params.size()];
+        Set<String> sset = params.keySet();
+        int i = 0;
+        for (String os : sset) {
+            keys[i++] = os;
+        }
+
+        Map map = new HashMap<String, Object>();
+        map.put("tablename", "pay_o_tb");
+        map.put("keys", keys);
+        map.put("params", params);
+
+        userService.creatTableAndInsert(map);
 	}
+
 }
