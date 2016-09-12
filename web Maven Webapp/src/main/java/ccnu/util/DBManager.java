@@ -12,7 +12,7 @@ public class DBManager {
 		ResultSet rs = null;  
 		try {  
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-			ct = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=Test", "yeshiwu", "123456");  
+			ct = DriverManager.getConnection("jdbc:sqlserver://218.192.172.69:1433;DatabaseName=Test", "yeshiwu", "ye2016@gz");  
 			psm = ct.prepareStatement("select * from people_tb");  
 			rs = psm.executeQuery();  
 			while (rs.next())  
